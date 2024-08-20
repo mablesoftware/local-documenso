@@ -317,7 +317,7 @@ If you are deploying to a cluster that uses only IPv6, You can use a custom comm
 For local docker run
 
 ```bash
-docker run -it documenso:latest npm run start -- -H ::
+docker run -it documenso:latest pnpm run start -- -H ::
 ```
 
 For k8s or docker-compose
@@ -328,7 +328,7 @@ containers:
     image: documenso:latest
     imagePullPolicy: IfNotPresent
     command:
-      - npm
+      - pnpm
     args:
       - run
       - start
@@ -342,7 +342,7 @@ containers:
 Wrap your package script with the `with:env` script like such:
 
 ```
-npm run with:env -- npm run myscript
+npm run with:env -- pnpm run myscript
 ```
 
 The same can be done when using `npx` for one of the bin scripts:

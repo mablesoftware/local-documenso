@@ -7,7 +7,7 @@
   "scripts": {
     "test:dev": "playwright test",
     "test-ui:dev": "playwright test --ui",
-    "test:e2e": "start-server-and-test \"npm run start -w @documenso/web\" http://localhost:3000 \"playwright test\""
+    "test:e2e": "start-server-and-test \"pnpm run start -w @documenso/web\" http://localhost:3000 \"playwright test\""
   },
   "keywords": [],
   "author": "",
