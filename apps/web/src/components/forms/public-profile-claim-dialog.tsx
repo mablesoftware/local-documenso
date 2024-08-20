@@ -65,7 +65,7 @@ export const ClaimPublicProfileDialogForm = ({
 
   const [claimed, setClaimed] = useState(false);
 
-  const baseUrl = new URL(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3000');
+  const baseUrl = new URL(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3060');
 
   const form = useForm<TClaimPublicProfileFormSchema>({
     values: {

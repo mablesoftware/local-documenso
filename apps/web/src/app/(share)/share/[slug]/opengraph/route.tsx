@@ -39,7 +39,7 @@ export async function GET(_request: Request, { params: { slug } }: SharePageOpen
     ),
   ]);
 
-  const baseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
+  const baseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3060';
 
   const recipientOrSender: ShareHandlerAPIResponse = await fetch(
     new URL(`/api/share?slug=${slug}`, baseUrl),

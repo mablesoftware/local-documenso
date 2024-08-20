@@ -39,7 +39,7 @@ export default async function handlerFeatureFlagAll(req: Request) {
   const origin = req.headers.get('origin');
 
   if (origin) {
-    if (origin.startsWith(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3000')) {
+    if (origin.startsWith(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3060')) {
       res.headers.set('Access-Control-Allow-Origin', origin);
     }
 

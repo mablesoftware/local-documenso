@@ -11,5 +11,4 @@ module.exports = {
   '**/*.{ts,tsx,cts,mts}': [eslint, prettier],
   '**/*.{js,jsx,cjs,mjs}': [prettier],
   '**/*.{yml,mdx}': [prettier],
-  '**/*/package.json': 'npm run precommit',
 };

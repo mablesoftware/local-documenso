@@ -102,7 +102,7 @@ export const SEND_SIGNING_EMAIL_JOB_DEFINITION = {
       'document.name': document.title,
     };
 
-    const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
+    const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3060';
     const signDocumentLink = `${NEXT_PUBLIC_WEBAPP_URL()}/sign/${recipient.token}`;
 
     const template = createElement(DocumentInviteEmailTemplate, {

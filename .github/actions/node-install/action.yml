@@ -35,5 +35,3 @@ runs:
       run: |
         npm ci --no-audit
         npm run prisma:generate
-      env:
-        HUSKY: '0'

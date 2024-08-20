@@ -31,7 +31,7 @@ export const sendForgotPassword = async ({ userId }: SendForgotPasswordOptions) 
   }
 
   const token = user.PasswordResetToken[0].token;
-  const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
+  const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3060';
   const resetPasswordLink = `${NEXT_PUBLIC_WEBAPP_URL()}/reset-password/${token}`;
 
   const template = createElement(ForgotPasswordTemplate, {

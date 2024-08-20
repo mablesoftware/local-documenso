@@ -92,7 +92,7 @@ export const SignUpFormV2 = ({
 
   const utmSrc = searchParams?.get('utm_source') ?? null;
 
-  const baseUrl = new URL(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3000');
+  const baseUrl = new URL(NEXT_PUBLIC_WEBAPP_URL() ?? 'http://localhost:3060');
 
   const form = useForm<TSignUpFormV2Schema>({
     values: {

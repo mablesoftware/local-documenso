@@ -35,7 +35,7 @@ export const sendConfirmationEmail = async ({ userId }: SendConfirmationEmailPro
     throw new Error('Verification token not found for the user');
   }
 
-  const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000';
+  const assetBaseUrl = NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3060';
   const confirmationLink = `${assetBaseUrl}/verify-email/${verificationToken.token}`;
   const senderName = NEXT_PRIVATE_SMTP_FROM_NAME || 'Documenso';
   const senderAddress = NEXT_PRIVATE_SMTP_FROM_ADDRESS || 'noreply@documenso.com';

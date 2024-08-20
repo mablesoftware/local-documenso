@@ -34,8 +34,6 @@ RUN apk add --no-cache make cmake g++
 
 WORKDIR /app
 
-# Disable husky from installing hooks
-ENV HUSKY 0
 ENV DOCKER_OUTPUT 1
 ENV NEXT_TELEMETRY_DISABLED 1
 

@@ -38,7 +38,7 @@ export function generateMetadata() {
       'Documenso, open source, DocuSign alternative, document signing, open signing infrastructure, open-source community, fast signing, beautiful signing, smart templates',
     authors: { name: 'Documenso, Inc.' },
     robots: 'index, follow',
-    metadataBase: new URL(NEXT_PUBLIC_MARKETING_URL() ?? 'http://localhost:3000'),
+    metadataBase: new URL(NEXT_PUBLIC_MARKETING_URL() ?? 'http://localhost:3060'),
     openGraph: {
       title: 'Documenso - The Open Source DocuSign Alternative',
       description:

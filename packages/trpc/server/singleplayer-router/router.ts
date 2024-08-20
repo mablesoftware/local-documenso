@@ -154,7 +154,7 @@ export const singleplayerRouter = router({
 
         const template = createElement(DocumentSelfSignedEmailTemplate, {
           documentName: documentName,
-          assetBaseUrl: NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3000',
+          assetBaseUrl: NEXT_PUBLIC_WEBAPP_URL() || 'http://localhost:3060',
         });
 
         const [html, text] = await Promise.all([
