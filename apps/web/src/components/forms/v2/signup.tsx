@@ -115,9 +115,9 @@ export const SignUpFormV2 = ({
 
   const onFormSubmit = async ({ name, email, password, signature, url }: TSignUpFormV2Schema) => {
     try {
-      await signup({ name, email, password, signature, url });
+      const res = await signup({ name, email, password, signature, url });
 
-      router.push(`/unverified-account`);
+      router.push(`/verify-email/${res.id}`);
 
       toast({
         title: 'Registration Successful',

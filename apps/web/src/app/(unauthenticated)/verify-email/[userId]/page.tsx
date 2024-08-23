@@ -7,12 +7,12 @@ import { Button } from '@documenso/ui/primitives/button';
 
 export type PageProps = {
   params: {
-    token: string;
+    userId: string;
   };
 };
 
-export default async function VerifyEmailPage({ params: { token } }: PageProps) {
-  if (!token) {
+export default async function VerifyEmailPage({ params: { userId } }: PageProps) {
+  if (!userId) {
     return (
       <div className="w-screen max-w-lg px-4">
         <div className="w-full">
@@ -29,7 +29,7 @@ export default async function VerifyEmailPage({ params: { token } }: PageProps) 
     );
   }
 
-  const verified = await verifyEmail({ token });
+  const verified = await verifyEmail({ userId: parseInt(userId) });
 
   if (verified === null) {
     return (
