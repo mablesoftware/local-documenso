@@ -4,7 +4,7 @@ import { DateTime } from 'luxon';
 import { prisma } from '@documenso/prisma';
 
 import { ONE_HOUR } from '../../constants/time';
-import { sendConfirmationEmail } from '../auth/send-confirmation-email';
+
 import { getMostRecentVerificationTokenByUserId } from './get-most-recent-verification-token-by-user-id';
 
 const IDENTIFIER = 'confirmation-email';
@@ -60,8 +60,6 @@ export const sendConfirmationToken = async ({
   }
 
   try {
-    await sendConfirmationEmail({ userId: user.id });
-
     return { success: true };
   } catch (err) {
     throw new Error(`Failed to send the confirmation email`);
